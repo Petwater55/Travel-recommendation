@@ -9,3 +9,12 @@ document.getElementById('searchBtn').addEventListener('click', function() {
     // Add logic to clear search results if applicable
     console.log('Search reset');
   });
+  function createHomePageLink() {
+    return '<a href="index.html">Home</a>';
+  }
+  function createAboutUsLink() {
+    return '<a href="about.html">About Us</a>';
+  }
+  function createContactUsLink() {
+    return '<a href="contact.html">Contact Us</a>';
+  }
