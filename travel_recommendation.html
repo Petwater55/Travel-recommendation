@@ -4,41 +4,17 @@
         <meta charset="UTF-8">
         <title>Contact Us</title>
         <link rel="stylesheet" href="./travel_recommendation.css">
-        <style>
-            body{
-                text-align center;
-            }
-            #contactForm {
-                max-width: 400px;
-                margin: 0 auto;
-            }
-            #contactFormInput,
-            #contactForm textarea {
-                width: 100%;
-                margin-bottom: 15px;
-                padding: 8px;
-            }
-            #contactForm Button {
-                padding: 15px 25px;
-                background-color: blue;
-                color: white;
-                border: none;
-                cursor: pointer;
-            }
-            #contactForm Button:Hover {
-                background-color: blue;
-            }
-            </style>
-            </head>
+         </head>
             <body>
-                <nav><h1>Travel Recommendation</h1>
+                <nav class="navbar">
+                    <h1>Travel Explorer</h1>
                     <a href="index.html">Home</a>
                     <a href="about.html">About Us</a>
                     <a href="contact.html">Contact Us</a>
-                </nav>
-                <input type="text" id="searchInput" placeholder="Search recommendations...">
+                 <input type="text" id="searchInput" placeholder="Search recommendations...">
                 <button id="searchButton">Serach</button>
                 <button id="resetButton">Reset</button>
+            </nav>
             <script>
                 function executeSearch() {
                     const query = document.getElementById('searchInput').value;
@@ -50,10 +26,13 @@
                 }
                 document.getElementById('searchButton').addEvenetListener('click', executeSearch);
                 </script>
-                <img src="https://static.vecteezy.com/system/resources/previews/033/860/044/non_2x/mt-fuji-and-chureito-pagoda-at-sunrise-japan-fujiyoshida-japan-beautiful-view-of-mountain-fuji-and-chureito-pagoda-at-sunset-ai-generated-free-photo.jpg" alt="Picture of mt-fuji-and-chureito-pagoda-at-sunrise-japan-fujiyoshida-japan-beautiful-view-of-mountain-fuji-and-chureito-pagoda-at-sunset-ai-generated-free-photo">
-                <section id="introduction">
-                    <h1>Explore the World!</h1>
-                    <p>This Travel recommendation website is designed to help you plan, explore and visit different places all across the world. Would you like to relax on one of the best beaches in the world? or Take an adventure through the jungle and see ruins of an ancient temple. Use our search bar to see where your next vacation will be. </p>
-                </section>
-            </body>
-            </html>
+<div class="image-container">
+  <img src="https://static.vecteezy.com/system/resources/previews/033/860/044/non_2x/mt-fuji-and-chureito-pagoda-at-sunrise-japan-fujiyoshida-japan-beautiful-view-of-mountain-fuji-and-chureito-pagoda-at-sunset-ai-generated-free-photo.jpg" alt="Picture of mt-fuji-and-chureito-pagoda-at-sunrise-japan-fujiyoshida-japan-beautiful-view-of-mountain-fuji-and-chureito-pagoda-at-sunset-ai-generated-free-photo">
+  <section id="introduction">
+    <h1>Explore the World!</h1>
+      <p>This Travel recommendation website is designed to help you plan, explore and visit different places all across the world. Would you like to relax on one of the best beaches in the world? or Take an adventure through the jungle and see ruins of an ancient temple. Use our search bar to see where your next vacation will be.</p>
+  </section>
+</div>
+    </script>
+ </body>
+ </html>
