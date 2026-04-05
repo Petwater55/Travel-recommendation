@@ -2,15 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Contact Us</title>
+        <title>Travel Explorer</title>
         <link rel="stylesheet" href="./travel_recommendation.css">
          </head>
             <body>
                 <nav class="navbar">
                     <h1>Travel Explorer</h1>
                     <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact Us</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact Us</a>
                  <input type="text" id="searchInput" placeholder="Search recommendations...">
                 <button id="searchButton">Serach</button>
                 <button id="resetButton">Reset</button>
@@ -32,6 +32,31 @@
     <h1>Explore the World!</h1>
       <p>This Travel recommendation website is designed to help you plan, explore and visit different places all across the world. Would you like to relax on one of the best beaches in the world? or Take an adventure through the jungle and see ruins of an ancient temple. Use our search bar to see where your next vacation will be.</p>
   </section>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to our company! Our goal here is to help you, plan, manage, and book your next trip to you're next destination. At, our company each one of our team members are specialist in History, culenary expertise, Adenture expert, Wellness guide, and Family Navigator. At Our company we hope to satisfy each and every one of your expectations in reaching your gaol here. Feel free to explore our website to learn more about what we offer!</p>
+    <h2>Our Team</h2>
+    <div id="team-members"></div>
+  </section>
+  <script>
+    const teamMembers = [
+        { name: "Christopher Smith", role: "customer service"},
+        { name: "Tom Hardy", role: "Lead data analyst"},
+        { name: "John Kennedy", role: "Spokesperson and projcet manager"},
+        { name: "Sarah Rosalyn", role: "Creative productions"}
+        ];
+        const teamContainer = document.getElementById('team-members');
+    teamMembers.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add('team-member');
+
+        memberDiv.innerHTML = `
+        <h3>${member.name}</h3>
+        <p>${member.role}</p>
+        `;
+        teamContainer.appendChild(memberDiv);
+    });
+    </script>
 </div>
     </script>
  </body>
