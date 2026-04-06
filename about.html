@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>About Us</title>
+        <link rel="stylesheet" href="./travel_recommendation.css">
+         </head>
+            <body>
+                <nav class="navbar">
+                    <h1>Travel Explorer</h1>
+                    <a href="home.html"><button>Home</button></a>
+                    <a href="about.html"><button>About Us</button></a>
+                    <a href="contact.html"><button>Contact Us</button></a>
+            </nav>
+<div class="image-container">
+    <img src="https://static.vecteezy.com/system/resources/previews/033/860/044/non_2x/mt-fuji-and-chureito-pagoda-at-sunrise-japan-fujiyoshida-japan-beautiful-view-of-mountain-fuji-and-chureito-pagoda-at-sunset-ai-generated-free-photo.jpg" alt="Picture of mt-fuji-and-chureito-pagoda-at-sunrise-japan-fujiyoshida-japan-beautiful-view-of-mountain-fuji-and-chureito-pagoda-at-sunset-ai-generated-free-photo">
+    <section id="introduction">
+<section id="about">
+    <h2>About Us</h2>
+    <p>Welcome to our company! Our goal here is to help you, plan, manage, and book your next trip to you're next destination. At, our company each one of our team members are specialist in History, culenary expertise, Adenture expert, Wellness guide, and Family Navigator. At Our company we hope to satisfy each and every one of your expectations in reaching your gaol here. Feel free to explore our website to learn more about what we offer!</p>
+    <h2>Our Team</h2>
+    <div id="team-members"></div>
+  </section>
+  <script>
+    const teamMembers = [
+        { name: "Christopher Smith", role: "customer service"},
+        { name: "Tom Hardy", role: "Lead data analyst"},
+        { name: "John Kennedy", role: "Spokesperson and projcet manager"},
+        { name: "Sarah Rosalyn", role: "Creative productions"}
+        ];
+        const teamContainer = document.getElementById('team-members');
+    teamMembers.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add('team-member');
+
+        memberDiv.innerHTML = `
+        <h3>${member.name}</h3>
+        <p>${member.role}</p>
+        `;
+        teamContainer.appendChild(memberDiv);
+    });
+    </script>

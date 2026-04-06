@@ -18,9 +18,9 @@
   .image-container #introduction {
     position: absolute;
     top: 300px;  /* Adjust vertical position */
-    left: 25px; /* Adjust horizontal position */
+    left: 50px; /* Adjust horizontal position */
     color: white;  /* Text color */
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    padding: 10px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 25px;
   }
