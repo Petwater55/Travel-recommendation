@@ -11,22 +11,45 @@
                     <a href="home.html"><button>Home</button></a>
                     <a href="about.html"><button>About Us</button></a>
                     <a href="contact.html"><button>Contact Us</button></a>
-                 <input type="text" id="searchInput" placeholder="Search recommendations...">
-                <button id="searchButton">Serach</button>
-                <button id="resetButton">Reset</button>
-            </nav>
-            <script>
-                function executeSearch() {
-                    const query = document.getElementById('searchInput').value;
-                    if (query) {
-                        alert('Searching for: ' + query);
-                    } else {
-                        alert('Please enter a search term.');
-                    }
-                }
-                document.getElementById('searchButton').addEvenetListener('click', executeSearch);
-                </script>
-<div class="image-container">
+                    <input type="text" id="searchInput" placeholder="Search recommendations..." />
+                    <button id="searchButton">Search</button>
+                    <button id="resetButton">Reset</button>
+                    <div id="results"></div>
+                    
+                   <script>
+                     const expectedKeywords = ['countries', 'temples', 'beaches'];
+                    
+                    function executeSearch() {
+                     const query = document.getElementById('searchInput').value;
+                     const resultsDiv = document.getElementById('results');
+                
+                     if (query) {
+                      let keywords = query.replace(/[()]/g, '')
+                        .split(',')
+                        .map(k => k.trim().toLowerCase())
+                        .filter(k => k.length > 0);
+                
+                      let matches = keywords.filter(k => expectedKeywords.includes(k));
+                
+                      if (matches.length > 0) {
+                        resultsDiv.innerHTML = `<p>Found matches: ${matches.join(', ')}</p>`;
+                      } else {
+                        resultsDiv.innerHTML = '<p>No matches found.</p>';
+                      }
+                     } else {
+                      resultsDiv.innerHTML = '<p>Please enter a search term.</p>';
+                     }
+                      }
+                    
+                      function resetSearch() {
+                        document.getElementById('searchInput').value = '';
+                        document.getElementById('results').innerHTML = '';
+                      }
+                    
+                      document.getElementById('searchButton').addEventListener('click', executeSearch);
+                      document.getElementById('resetButton').addEventListener('click', resetSearch);
+                    </script>
+                    <div class="image-container">
   <img src="https://static.vecteezy.com/system/resources/previews/033/860/044/non_2x/mt-fuji-and-chureito-pagoda-at-sunrise-japan-fujiyoshida-japan-beautiful-view-of-mountain-fuji-and-chureito-pagoda-at-sunset-ai-generated-free-photo.jpg" alt="Picture of mt-fuji-and-chureito-pagoda-at-sunrise-japan-fujiyoshida-japan-beautiful-view-of-mountain-fuji-and-chureito-pagoda-at-sunset-ai-generated-free-photo">
   <section id="introduction">
     <h1>Explore the World!</h1>

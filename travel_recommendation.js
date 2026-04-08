@@ -1,6 +1,21 @@
 document.getElementById('searchBtn').addEventListener('click', function() {
-    const query = document.getElementById('searchInput').value;
-    // Add your search logic here, e.g., filter recommendations based on query
+    const expectedKeywords = ['countries', 'temples', 'beaches'];
+      let query = document.getElementById('searchInput').value;
+      let keywords = query.replace(/[()]/g, '')
+        .split(',')
+        .map(k => k.trim().toLowerCase())
+        .filter(k => k.length > 0); 
+    
+      let matches = keywords.filter(k => expectedKeywords.includes(k));
+    
+      let resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '';
+    
+      if (matches.length > 0) {
+        resultsDiv.innerHTML = `<p>Found matches: ${matches.join(', ')}</p>`;
+      } else {
+        resultsDiv.innerHTML = '<p>No matches found.</p>';
+      }
     console.log('Search for:', query);
   });
   
@@ -21,8 +36,20 @@ document.getElementById('searchBtn').addEventListener('click', function() {
   fetch('path/to/api.json') 
   .then(response => response.json())
   .then(data => {
-    data.tasks.forEach(task => {
-        console.log(task image);
+    data.countries.forEach(country => {
+        console.log(country.image);
     });
   })
   .catch(error => console.error('error fetching data:', error));
+  let inputText = '(Countries,Temples,Beaches)';
+  let keywords = inputText.replace(/[()]/g, '')
+  .split(',')
+  .map(keyword => keyword.trim().toLowerCase());
+  let expectedKeywords = ['countries', 'temples', 'beaches'];
+  keywords.forEach(keyword => {
+    if (expectedKeywords.includes(keyword)) {
+      console.log(`Input includes: ${keyword}`);
+    } else {
+        console.log(`Unexpected keyword: ${keyword}`);  
+    }
+  });
