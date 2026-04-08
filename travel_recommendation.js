@@ -18,3 +18,11 @@ document.getElementById('searchBtn').addEventListener('click', function() {
   function createContactUsLink() {
     return '<a href="contact.html">Contact Us</a>';
   }
+  fetch('path/to/api.json') 
+  .then(response => response.json())
+  .then(data => {
+    data.tasks.forEach(task => {
+        console.log(task image);
+    });
+  })
+  .catch(error => console.error('error fetching data:', error));
